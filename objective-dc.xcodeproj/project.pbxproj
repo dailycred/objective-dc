@@ -14,14 +14,14 @@
 		36AC647216780C450033BDC6 /* libobjective-dc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 36AC645A16780C450033BDC6 /* libobjective-dc.a */; };
 		36AC647816780C450033BDC6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 36AC647616780C450033BDC6 /* InfoPlist.strings */; };
 		36AC647B16780C450033BDC6 /* objective_dcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AC647A16780C450033BDC6 /* objective_dcTests.m */; };
-		36AC648C16780C960033BDC6 /* DCClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 36AC648416780C960033BDC6 /* DCClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		36AC648D16780C960033BDC6 /* DCClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AC648516780C960033BDC6 /* DCClient.m */; };
-		36AC648E16780C960033BDC6 /* DCURL.h in Headers */ = {isa = PBXBuildFile; fileRef = 36AC648616780C960033BDC6 /* DCURL.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		36AC648F16780C960033BDC6 /* DCURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AC648716780C960033BDC6 /* DCURL.m */; };
-		36AC649016780C960033BDC6 /* DCURLParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 36AC648816780C960033BDC6 /* DCURLParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		36AC649116780C960033BDC6 /* DCURLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AC648916780C960033BDC6 /* DCURLParser.m */; };
-		36AC649216780C960033BDC6 /* DCUser.h in Headers */ = {isa = PBXBuildFile; fileRef = 36AC648A16780C960033BDC6 /* DCUser.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		36AC649316780C960033BDC6 /* DCUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AC648B16780C960033BDC6 /* DCUser.m */; };
+		36AC65141678140F0033BDC6 /* DCClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 36AC650C1678140F0033BDC6 /* DCClient.h */; };
+		36AC65151678140F0033BDC6 /* DCClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AC650D1678140F0033BDC6 /* DCClient.m */; };
+		36AC65161678140F0033BDC6 /* DCURL.h in Headers */ = {isa = PBXBuildFile; fileRef = 36AC650E1678140F0033BDC6 /* DCURL.h */; };
+		36AC65171678140F0033BDC6 /* DCURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AC650F1678140F0033BDC6 /* DCURL.m */; };
+		36AC65181678140F0033BDC6 /* DCURLParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 36AC65101678140F0033BDC6 /* DCURLParser.h */; };
+		36AC65191678140F0033BDC6 /* DCURLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AC65111678140F0033BDC6 /* DCURLParser.m */; };
+		36AC651A1678140F0033BDC6 /* DCUser.h in Headers */ = {isa = PBXBuildFile; fileRef = 36AC65121678140F0033BDC6 /* DCUser.h */; };
+		36AC651B1678140F0033BDC6 /* DCUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AC65131678140F0033BDC6 /* DCUser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +45,14 @@
 		36AC647716780C450033BDC6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		36AC647916780C450033BDC6 /* objective_dcTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = objective_dcTests.h; sourceTree = "<group>"; };
 		36AC647A16780C450033BDC6 /* objective_dcTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = objective_dcTests.m; sourceTree = "<group>"; };
-		36AC648416780C960033BDC6 /* DCClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DCClient.h; path = ../../DailycredExample/DailycredExample/DCClient.h; sourceTree = "<group>"; };
-		36AC648516780C960033BDC6 /* DCClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DCClient.m; path = ../../DailycredExample/DailycredExample/DCClient.m; sourceTree = "<group>"; };
-		36AC648616780C960033BDC6 /* DCURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DCURL.h; path = ../../DailycredExample/DailycredExample/DCURL.h; sourceTree = "<group>"; };
-		36AC648716780C960033BDC6 /* DCURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DCURL.m; path = ../../DailycredExample/DailycredExample/DCURL.m; sourceTree = "<group>"; };
-		36AC648816780C960033BDC6 /* DCURLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DCURLParser.h; path = ../../DailycredExample/DailycredExample/DCURLParser.h; sourceTree = "<group>"; };
-		36AC648916780C960033BDC6 /* DCURLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DCURLParser.m; path = ../../DailycredExample/DailycredExample/DCURLParser.m; sourceTree = "<group>"; };
-		36AC648A16780C960033BDC6 /* DCUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DCUser.h; path = ../../DailycredExample/DailycredExample/DCUser.h; sourceTree = "<group>"; };
-		36AC648B16780C960033BDC6 /* DCUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DCUser.m; path = ../../DailycredExample/DailycredExample/DCUser.m; sourceTree = "<group>"; };
+		36AC650C1678140F0033BDC6 /* DCClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCClient.h; sourceTree = "<group>"; };
+		36AC650D1678140F0033BDC6 /* DCClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCClient.m; sourceTree = "<group>"; };
+		36AC650E1678140F0033BDC6 /* DCURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCURL.h; sourceTree = "<group>"; };
+		36AC650F1678140F0033BDC6 /* DCURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCURL.m; sourceTree = "<group>"; };
+		36AC65101678140F0033BDC6 /* DCURLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCURLParser.h; sourceTree = "<group>"; };
+		36AC65111678140F0033BDC6 /* DCURLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCURLParser.m; sourceTree = "<group>"; };
+		36AC65121678140F0033BDC6 /* DCUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCUser.h; sourceTree = "<group>"; };
+		36AC65131678140F0033BDC6 /* DCUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCUser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,14 +110,14 @@
 		36AC645F16780C450033BDC6 /* objective-dc */ = {
 			isa = PBXGroup;
 			children = (
-				36AC648416780C960033BDC6 /* DCClient.h */,
-				36AC648516780C960033BDC6 /* DCClient.m */,
-				36AC648616780C960033BDC6 /* DCURL.h */,
-				36AC648716780C960033BDC6 /* DCURL.m */,
-				36AC648816780C960033BDC6 /* DCURLParser.h */,
-				36AC648916780C960033BDC6 /* DCURLParser.m */,
-				36AC648A16780C960033BDC6 /* DCUser.h */,
-				36AC648B16780C960033BDC6 /* DCUser.m */,
+				36AC650C1678140F0033BDC6 /* DCClient.h */,
+				36AC650D1678140F0033BDC6 /* DCClient.m */,
+				36AC650E1678140F0033BDC6 /* DCURL.h */,
+				36AC650F1678140F0033BDC6 /* DCURL.m */,
+				36AC65101678140F0033BDC6 /* DCURLParser.h */,
+				36AC65111678140F0033BDC6 /* DCURLParser.m */,
+				36AC65121678140F0033BDC6 /* DCUser.h */,
+				36AC65131678140F0033BDC6 /* DCUser.m */,
 				36AC646016780C450033BDC6 /* Supporting Files */,
 			);
 			path = "objective-dc";
@@ -157,10 +157,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36AC648C16780C960033BDC6 /* DCClient.h in Headers */,
-				36AC648E16780C960033BDC6 /* DCURL.h in Headers */,
-				36AC649016780C960033BDC6 /* DCURLParser.h in Headers */,
-				36AC649216780C960033BDC6 /* DCUser.h in Headers */,
+				36AC65141678140F0033BDC6 /* DCClient.h in Headers */,
+				36AC65161678140F0033BDC6 /* DCURL.h in Headers */,
+				36AC65181678140F0033BDC6 /* DCURLParser.h in Headers */,
+				36AC651A1678140F0033BDC6 /* DCUser.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,10 +261,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36AC648D16780C960033BDC6 /* DCClient.m in Sources */,
-				36AC648F16780C960033BDC6 /* DCURL.m in Sources */,
-				36AC649116780C960033BDC6 /* DCURLParser.m in Sources */,
-				36AC649316780C960033BDC6 /* DCUser.m in Sources */,
+				36AC65151678140F0033BDC6 /* DCClient.m in Sources */,
+				36AC65171678140F0033BDC6 /* DCURL.m in Sources */,
+				36AC65191678140F0033BDC6 /* DCURLParser.m in Sources */,
+				36AC651B1678140F0033BDC6 /* DCUser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +413,7 @@
 				36AC648016780C450033BDC6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		36AC648116780C450033BDC6 /* Build configuration list for PBXNativeTarget "objective-dcTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +422,7 @@
 				36AC648316780C450033BDC6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
