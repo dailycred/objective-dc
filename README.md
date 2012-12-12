@@ -15,6 +15,8 @@ Now that you've added the project to your app, there are a few settings you need
 
 ## Configuring Your Target
 
+###### Many of the instructions for this section were copied from the wonderful [RestKit](https://github.com/RestKit/RestKit) library.
+
 Now that your project is aware of Objective-DC, you need to configure a few settings and add some required Frameworks to your project's build configuration. Click on the top-most item in the Project Navigator to open the Project and Targets configuration pane. 
 
 Then click on the **Build Settings** item and input "other linker flags" into the search text box in the top right of the main editing pane. Double click on the build Setting titled **Other Linker Flags**. A panel will pop open prompting you to input the Linker Flags you wish to add. Input **-ObjC -all_load** and hit Done.
