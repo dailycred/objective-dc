@@ -350,6 +350,7 @@
 				DSTROOT = /tmp/objective_dc.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "objective-dc/objective-dc-Prefix.pch";
+				INSTALL_PATH = "“$(BUILT_PRODUCTS_DIR)”";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "/include/objective-dc";
@@ -363,6 +364,7 @@
 				DSTROOT = /tmp/objective_dc.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "objective-dc/objective-dc-Prefix.pch";
+				INSTALL_PATH = "“$(BUILT_PRODUCTS_DIR)”";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "/include/objective-dc";
