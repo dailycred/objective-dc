@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'objective-dc' target in the 'objective-dc' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif
