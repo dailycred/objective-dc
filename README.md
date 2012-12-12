@@ -60,7 +60,7 @@ You can now open your app from a link by using the URL scheme that you created. 
 
 ## Usage
 
-At the very beginning of your application, configure the Dailycred Client with your `client_id`,`client_secret`, and optionally your `redirect_uri`.
+If you've made it here, the rest is easy. At the very beginning of your application, configure the Dailycred Client with your `client_id`,`client_secret`, and optionally your `redirect_uri`.
 
     [DCClient initWithClientId:@"YOUR_CLIENT_ID" andClientSecret:@"YOUR_CLIENT_SECRET" withRedirectUri:@"myappscheme://fakedomainname"];
 
