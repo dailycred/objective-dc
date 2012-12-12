@@ -352,6 +352,7 @@
 				GCC_PREFIX_HEADER = "objective-dc/objective-dc-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "/include/objective-dc";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -364,6 +365,7 @@
 				GCC_PREFIX_HEADER = "objective-dc/objective-dc-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "/include/objective-dc";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
