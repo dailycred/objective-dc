@@ -44,13 +44,24 @@ You are all set for using Objective-DC in your application. To make sure everyth
 If you are still experiencing difficulties, copying the header files from `objective-dc` to your main file tree may fix compilation errors. Open the `objective-dc.xcodeproj` folder and `objective-dc` subfolder in your project navigator. Select the 4 headers files (the ones that end in `.h`) and drag them into a folder called `Headers` in your main folder.
 ![Copy Headers](https://raw.github.com/dailycred/objective-dc/master/docs/copy_headers.png)
 
-## Usage
+## Custom URL scheme
 
-You will need to setup a custom **http scheme** to open your application from a browser. View [these instructions] to see how to setup a custom url scheme for your app.
+You will need to setup a custom **http scheme** to open your application from a browser. This will allow you to use links like `myappcustomscheme://url` to open your app from a browser (when your app is installed]).
+
+Open the **info** tab in your target settings. Click the plus sign in the bottom right and select **Add URL Type**.
+![Add URL Type](https://raw.github.com/dailycred/objective-dc/master/docs/add_url_type.png)
+
+Configure your URL Type with your own unique url scheme and identifier. Choose something like **com.myappname** for the Identifier and **myappname** for the URL schemes.
+![Configure URL Type](https://raw.github.com/dailycred/objective-dc/master/docs/url_type_settings.png)
+
+You can now open your app from a link by using the URL scheme that you created. This will be used for redirecting your user back to your application after authenticating. Your `redirect_uri` must use this URL scheme with any domain (Dailycred currently requires a domain for `redirect_uri`s). Make sure you approve whatever fake domain name you choose to use in your Dailycred settings. If you choose to use **fakedomainname** with your custom URL scheme of **myappscheme**, your `redirect_uri` would be **myappscheme://fakedomainname**.
+![Dailycred Settings](https://raw.github.com/dailycred/objective-dc/master/docs/dailycred_settings.png)
+
+## Usage
 
 At the very beginning of your application, configure the Dailycred Client with your `client_id`,`client_secret`, and optionally your `redirect_uri`.
 
-    DCClient *dailycred = [DCClient initWithClientId:@"YOUR_CLIENT_ID" andClientSecret:@"YOUR_CLIENT_SECRET" withRedirectUri:@"myapp://localhost"];
+    [DCClient initWithClientId:@"YOUR_CLIENT_ID" andClientSecret:@"YOUR_CLIENT_SECRET" withRedirectUri:@"myappscheme://fakedomainname"];
 
 This sets up a singleton client that can be accessed at `[DCClient sharedClient]`. To send a user to be authenticated, simply call
 
@@ -77,12 +88,12 @@ After successfully connecting, the user will be sent back to your app. Implement
 The client will then go through the entire OAuth flow and retrieve the user's details. The client serializes the user object in `NSUserDefaults` so that you can access the current user even after the app is closed. You can get all sorts of information about the user:
 
     DCUser *user = [DCClient getCurrentUser];
-    //user.email;
-    //user.display;
-    //user.picture;
-    //user.accessTokens;
-    //user.identities;
-    //user.json; //returns a dictionary of the json response from https://www.dailycred.com/graph/me.json
+    NSLog(@"email: %@",user.email);
+    NSLog(@"display: %@",user.display);
+    NSLog(@"picture url: %@",user.picture);
+    NSLog(@"access tokens: %@",user.accessTokens);
+    NSLog(@"identities: %@",user.identities);
+    NSLog(@"json response: %@",user.json); //returns a dictionary of the json response from https://www.dailycred.com/graph/me.json
 
 You can log out the current user:
 
