@@ -14,13 +14,13 @@
 		36AC647216780C450033BDC6 /* libobjective-dc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 36AC645A16780C450033BDC6 /* libobjective-dc.a */; };
 		36AC647816780C450033BDC6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 36AC647616780C450033BDC6 /* InfoPlist.strings */; };
 		36AC647B16780C450033BDC6 /* objective_dcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AC647A16780C450033BDC6 /* objective_dcTests.m */; };
-		36AC65141678140F0033BDC6 /* DCClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 36AC650C1678140F0033BDC6 /* DCClient.h */; };
+		36AC65141678140F0033BDC6 /* DCClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 36AC650C1678140F0033BDC6 /* DCClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		36AC65151678140F0033BDC6 /* DCClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AC650D1678140F0033BDC6 /* DCClient.m */; };
-		36AC65161678140F0033BDC6 /* DCURL.h in Headers */ = {isa = PBXBuildFile; fileRef = 36AC650E1678140F0033BDC6 /* DCURL.h */; };
+		36AC65161678140F0033BDC6 /* DCURL.h in Headers */ = {isa = PBXBuildFile; fileRef = 36AC650E1678140F0033BDC6 /* DCURL.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		36AC65171678140F0033BDC6 /* DCURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AC650F1678140F0033BDC6 /* DCURL.m */; };
-		36AC65181678140F0033BDC6 /* DCURLParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 36AC65101678140F0033BDC6 /* DCURLParser.h */; };
+		36AC65181678140F0033BDC6 /* DCURLParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 36AC65101678140F0033BDC6 /* DCURLParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		36AC65191678140F0033BDC6 /* DCURLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AC65111678140F0033BDC6 /* DCURLParser.m */; };
-		36AC651A1678140F0033BDC6 /* DCUser.h in Headers */ = {isa = PBXBuildFile; fileRef = 36AC65121678140F0033BDC6 /* DCUser.h */; };
+		36AC651A1678140F0033BDC6 /* DCUser.h in Headers */ = {isa = PBXBuildFile; fileRef = 36AC65121678140F0033BDC6 /* DCUser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		36AC651B1678140F0033BDC6 /* DCUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AC65131678140F0033BDC6 /* DCUser.m */; };
 		36AC652016781DDE0033BDC6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36AC651F16781DDE0033BDC6 /* UIKit.framework */; };
 /* End PBXBuildFile section */
