@@ -2,6 +2,8 @@
 
 #### Objective-DC is an objective-c library for using Dailycred for user authentication in your iOS apps.
 
+You can view a demo app using this library [here](https://github.com/dailycred/ios-example).
+
 This library is very new, so there may be bugs. Please report a bug by creating an issue in this repository or email `support@dailycred.com`.
 
 To get started, first clone this repository in your app's file directory:
