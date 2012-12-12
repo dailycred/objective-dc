@@ -22,6 +22,7 @@
 		36AC65191678140F0033BDC6 /* DCURLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AC65111678140F0033BDC6 /* DCURLParser.m */; };
 		36AC651A1678140F0033BDC6 /* DCUser.h in Headers */ = {isa = PBXBuildFile; fileRef = 36AC65121678140F0033BDC6 /* DCUser.h */; };
 		36AC651B1678140F0033BDC6 /* DCUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AC65131678140F0033BDC6 /* DCUser.m */; };
+		36AC652016781DDE0033BDC6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36AC651F16781DDE0033BDC6 /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		36AC65111678140F0033BDC6 /* DCURLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCURLParser.m; sourceTree = "<group>"; };
 		36AC65121678140F0033BDC6 /* DCUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCUser.h; sourceTree = "<group>"; };
 		36AC65131678140F0033BDC6 /* DCUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCUser.m; sourceTree = "<group>"; };
+		36AC651F16781DDE0033BDC6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36AC652016781DDE0033BDC6 /* UIKit.framework in Frameworks */,
 				36AC645E16780C450033BDC6 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -81,6 +84,7 @@
 		36AC644F16780C450033BDC6 = {
 			isa = PBXGroup;
 			children = (
+				36AC651F16781DDE0033BDC6 /* UIKit.framework */,
 				36AC645F16780C450033BDC6 /* objective-dc */,
 				36AC647316780C450033BDC6 /* objective-dcTests */,
 				36AC645C16780C450033BDC6 /* Frameworks */,

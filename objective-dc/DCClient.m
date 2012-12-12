@@ -3,9 +3,10 @@
 //  DailycredExample
 //
 //  Created by Hank Stoever on 12/10/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 Dailycred. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
 #import "DCClient.h"
 #import "DCURL.h"
 #import "DCURLParser.h"
