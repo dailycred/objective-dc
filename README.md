@@ -46,7 +46,7 @@ If you are still experiencing difficulties, copying the header files from `objec
 
 ## Custom URL scheme
 
-You will need to setup a custom **http scheme** to open your application from a browser. This will allow you to use links like `myappcustomscheme://url` to open your app from a browser (when your app is installed]).
+You will need to setup a custom URL scheme to open your application from a browser. This will allow you to use links like `myappcustomscheme://url` to open your app from a browser (when your app is installed on the same device).
 
 Open the **info** tab in your target settings. Click the plus sign in the bottom right and select **Add URL Type**.
 ![Add URL Type](https://raw.github.com/dailycred/objective-dc/master/docs/add_url_type.png)
@@ -54,7 +54,8 @@ Open the **info** tab in your target settings. Click the plus sign in the bottom
 Configure your URL Type with your own unique url scheme and identifier. Choose something like **com.myappname** for the Identifier and **myappname** for the URL schemes.
 ![Configure URL Type](https://raw.github.com/dailycred/objective-dc/master/docs/url_type_settings.png)
 
-You can now open your app from a link by using the URL scheme that you created. This will be used for redirecting your user back to your application after authenticating. Your `redirect_uri` must use this URL scheme with any domain (Dailycred currently requires a domain for `redirect_uri`s). Make sure you approve whatever fake domain name you choose to use in your Dailycred settings. If you choose to use **fakedomainname** with your custom URL scheme of **myappscheme**, your `redirect_uri` would be **myappscheme://fakedomainname**.
+You can now open your app from a link by using the URL scheme that you created. This will be used for redirecting your user back to your application after authenticating. Your `redirect_uri` must use this URL scheme with any domain (Dailycred currently requires a domain for `redirect_uri`). Make sure you approve whatever fake domain name you choose to use in your Dailycred settings. For example, if you choose to use **fakedomainname** with your custom URL scheme of **myappscheme**, your `redirect_uri` would be **myappscheme://fakedomainname**.
+
 ![Dailycred Settings](https://raw.github.com/dailycred/objective-dc/master/docs/dailycred_settings.png)
 
 ## Usage
