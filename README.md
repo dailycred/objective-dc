@@ -19,7 +19,7 @@ Now that you've added the project to your app, there are a few settings you need
 
 ###### Many of the instructions for this section were copied from the wonderful [RestKit](https://github.com/RestKit/RestKit) library.
 
-Now that your project is aware of Objective-DC, you need to configure a few settings and add some required Frameworks to your project's build configuration. Click on the top-most item in the Project Navigator to open the Project and Targets configuration pane. 
+Now that your project is aware of Objective-DC, you need to configure a few settings and add some required Frameworks to your project's build configuration. Click on the top-most item in the Project Navigator to open the Project and Targets configuration pane.
 
 Then click on the **Build Settings** item and input "other linker flags" into the search text box in the top right of the main editing pane. Double click on the build Setting titled **Other Linker Flags**. A panel will pop open prompting you to input the Linker Flags you wish to add. Input **-ObjC -all_load** and hit Done.
 
@@ -28,18 +28,21 @@ NOTE: Try removing the -all_load flag if you are receiving runtime errors relate
 ![Add Linker Flag](https://github.com/RestKit/RestKit/raw/master/Docs/Images/Installation/03_Add_Linker_Flag.png)
 
 After configuring the Linker Flag, clear the text from the search box and input "_header search path_". Double click on the build setting titled **Header Search Paths**. A panel will pop open prompting you to input the Header Search Path you wish to add. Input **"$(BUILT_PRODUCTS_DIR)/../../Headers"**. Be sure to include the surrounding quotes (-- they are important!) and hit Done.
-![Add Header Search Path](https://github.com/RestKit/RestKit/raw/development/Docs/Images/Installation/03_Add_Header_Search_Path.png)
+![Add Header Search Path](https://raw.github.com/dailycred/objective-dc/master/docs/header_search_paths.png)
 
 Now click on the **Build Phases** tab and click the disclosure triangle next to the item titled **Target Dependencies**. A sheet will pop open asking you to select the target you want to add a dependency on. Click **objective-dc** and hit the **Add** button.
 ![Add Target Dependency](https://github.com/RestKit/RestKit/raw/master/Docs/Images/Installation/04_Add_Target_Dependency.png)
-![Select RestKit Target](https://github.com/RestKit/RestKit/raw/master/Docs/Images/Installation/05_Select_RestKit_Target.png)
+![Select RestKit Target](https://raw.github.com/dailycred/objective-dc/master/docs/target_dependencies.png)
 
 Once the Target Dependency has been configured, you now need to link the Objective-DC static libraries and the required Frameworks into your target. Click the disclosure triangle next to the item labeled **Link Binary With Libraries** and click the plus button:
-![Add Libraries](https://github.com/RestKit/RestKit/raw/master/Docs/Images/Installation/06_Add_Libraries.png)
+![Add Libraries](https://raw.github.com/dailycred/objective-dc/master/docs/link_binary.png)
 
 Select the Objective-DC static library.
 
 You are all set for using Objective-DC in your application. To make sure everything is working, open a file and insert `#import "DCClient.h"` at the top of the file. If no error is seen, everything should be working well.
+
+If you are still experiencing difficulties, copying the header files from `objective-dc` to your main file tree may fix compilation errors. Open the `objective-dc.xcodeproj` folder and `objective-dc` subfolder in your project navigator. Select the 4 headers files (the ones that end in `.h`) and drag them into a folder called `Headers` in your main folder.
+![Copy Headers](https://raw.github.com/dailycred/objective-dc/master/docs/copy_headers.png)
 
 ## Usage
 
@@ -84,3 +87,6 @@ The client will then go through the entire OAuth flow and retrieve the user's de
 You can log out the current user:
 
     [DCClient logout];
+
+
+![](https://www.dailycred.com/dc.gif?client_id=dailycred&title=objc_repo "dailycred")
