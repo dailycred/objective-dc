@@ -100,5 +100,16 @@ You can log out the current user:
 
     [DCClient logout];
 
+You can also login or sign up a user with just an email and password:
+
+    DCClient *dailycred = [DCClient sharedClient];
+    DCUser *user = [dailycred signinUserWithLogin:@"fakelogin@example.com" andPassword:@"password" andError:&error];
+
+    //this call will sign in or create a new user
+    user = [dailycred signupOrSigninUserWithLogin:@"fakelogin@example.com" andPassword:@"password" andError:&error];
+
+    //if signin or signup is successful, the user is persisted
+    DCUser *sameUser = [DCClient getCurrentUser];
+
 
 ![](https://www.dailycred.com/dc.gif?client_id=dailycred&title=objc_repo "dailycred")
