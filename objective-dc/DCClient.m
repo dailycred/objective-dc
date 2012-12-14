@@ -19,6 +19,8 @@ NSString* const kConnectEndpoint = @"/connect";
 NSString* const kMeJsonEndpoint = @"/graph/me.json";
 NSString* const kGatewayEndpoint = @"/oauth/gateway";
 NSString* const kCurrentUserKey = @"dc_current_user";
+NSString* const kSigninEndpoint = @"/user/api/signin.json";
+NSString* const kSignupEndpoint = @"/user/api/signup.json";
 
 static DCClient *instance = nil;
 static DCUser *currentUser = nil;
@@ -92,6 +94,36 @@ static DCUser *currentUser = nil;
     DCURL *url = [self getURLFromEndpoint:kMeJsonEndpoint];
     url = [url URLbyAppendingParameterWithKey:@"access_token" andValue:accessToken];
     return [url getJsonResponse];
+}
+
+-(DCUser *)signinUserWithLogin:(NSString *)login andPassword:(NSString *) password andError:(NSError **)error{
+    DCURL *url = [self getAuthURLFromEndpoint:kSigninEndpoint];
+    url = [url URLbyAppendingParameterWithKey:@"login" andValue:login];
+    url = [url URLbyAppendingParameterWithKey:@"pass" andValue:password];
+    NSError *newError = nil;
+    NSDictionary *response = [url getJsonResponseWithHTTPMethod:@"POST" andError:&newError];
+    if (newError != nil){
+        *error = newError;
+        return nil;
+    }
+    DCUser *user = [[DCUser alloc] initWithDictionary:[response objectForKey:@"user"]];
+    [DCClient setCurrentUser:user];
+    return user;
+}
+
+-(DCUser *)signupOrSigninUserWithLogin:(NSString *)login andPassword:(NSString *) password andError:(NSError **)error{
+    DCURL *url = [self getAuthURLFromEndpoint:kSignupEndpoint];
+    url = [url URLbyAppendingParameterWithKey:@"email" andValue:login];
+    url = [url URLbyAppendingParameterWithKey:@"pass" andValue:password];
+    NSError *newError = nil;
+    NSDictionary *response = [url getJsonResponseWithHTTPMethod:@"POST" andError:&newError];
+    if (newError != nil){
+        *error = newError;
+        return nil;
+    }
+    DCUser *user = [[DCUser alloc] initWithDictionary:[response objectForKey:@"user"]];
+    [DCClient setCurrentUser:user];
+    return user;
 }
 
 -(DCURL *)getAuthURLFromEndpoint:(NSString *)endpoint{

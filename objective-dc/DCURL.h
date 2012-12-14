@@ -12,4 +12,6 @@
 -(DCURL *)URLByAppendingQueryString:(NSString *)queryString;
 -(DCURL *)URLbyAppendingParameterWithKey:(NSString *)key andValue:(NSString *)value;
 -(NSDictionary *)getJsonResponse;
+-(NSDictionary *)getJsonResponseWithHTTPMethod:(NSString *)method;
+-(NSDictionary *)getJsonResponseWithHTTPMethod:(NSString *)method andError:(NSError **)error;
 @end

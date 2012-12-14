@@ -73,4 +73,36 @@
     STAssertEqualObjects([parser valueForVariable:@"redirect_uri"], @"myapp://url",@"redirect_uri should be set");
 }
 
+-(void)testSignin{
+    DCClient *dailycred = [DCClient initWithClientId:@"7ea9b8d5-02c9-425b-87b2-b1855a37cba9" andClientSecret:@"33e355d1-9e39-465e-b8d6-fcc734ce6e37-ee05ae3d-9bbe-4996-b6fd-04fa0341fc7f" withRedirectUri:nil];
+    NSError *error = nil;
+    DCUser *user = nil;
+    
+    //test failed login
+    user = [dailycred signinUserWithLogin:@"fakelogin" andPassword:@"password" andError:&error];
+    STAssertNotNil(error, @"error should be present");
+    STAssertNil(user,@"user should be nil");
+    NSString *attribute = [[error userInfo] objectForKey:@"attribute"];
+    STAssertEqualObjects(attribute, @"form",@"attribute should be set correctly in form");
+    STAssertNotNil(attribute,@"attribute should be present in error");
+    
+    //test successful login
+    error = nil;
+    user = [dailycred signinUserWithLogin:@"test@test.test" andPassword:@"password" andError:&error];
+    STAssertNil(error,@"error should be nil");
+    STAssertNotNil(user,@"user should not be nil");
+    STAssertEqualObjects(user.email, @"test@test.test",@"email should be set");
+    STAssertEqualObjects(user, [DCClient getCurrentUser],@"current user should be persisted");
+    
+    
+    //test successful signup
+    long time = [[NSDate date] timeIntervalSince1970];
+    NSString *email = [NSString stringWithFormat:@"testemail%llu@test.test",time];
+    user = [dailycred signupOrSigninUserWithLogin:email andPassword:@"password" andError:&error];
+    STAssertNil(error,@"error should be nil");
+    STAssertNotNil(user,@"user should not be nil");
+    STAssertEqualObjects(user.email, email,@"email should be set");
+    STAssertEqualObjects(user, [DCClient getCurrentUser],@"current user should be persisted");
+}
+
 @end

@@ -25,13 +25,37 @@
 }
 
 -(NSDictionary *)getJsonResponse{
+    return [self getJsonResponseWithHTTPMethod:@"GET"];
+}
+
+-(NSDictionary *)getJsonResponseWithHTTPMethod:(NSString *)method{
+    return [self getJsonResponseWithHTTPMethod:method andError:nil];
+}
+
+-(NSDictionary *)getJsonResponseWithHTTPMethod:(NSString *)method andError:(NSError **)error{
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     [request setURL:self];
+    [request setHTTPMethod:method];
     //get response
-    NSHTTPURLResponse* urlResponse = nil;  
-    NSError *error = [[NSError alloc] init];  
-    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&urlResponse error:&error];
-    NSDictionary* results = [NSJSONSerialization JSONObjectWithData:responseData options:0 error:nil];
-    return results;
+    NSHTTPURLResponse* urlResponse = nil;
+    NSError *urlError = nil;
+    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&urlResponse error:&urlError];
+    if (urlError != nil){
+        *error = urlError;
+        return nil;
+    }
+    NSDictionary* response = [NSJSONSerialization JSONObjectWithData:responseData options:0 error:nil];
+    id worked = [response objectForKey:@"worked"];
+    if (worked != nil && ![worked boolValue]){
+        NSLog(@"error from response: %@", response);
+        NSMutableDictionary *details = [NSMutableDictionary dictionary];
+        NSDictionary *responseError = [[response objectForKey:@"errors"] objectAtIndex:0];
+        [details setValue:[responseError objectForKey:@"message"] forKey:NSLocalizedDescriptionKey];
+        [details setValue:[responseError objectForKey:@"attribute"] forKey:@"attribute"];
+        [details setValue:response forKey:@"json"];
+        *error = [NSError errorWithDomain:@"dailycred" code:200 userInfo:details];
+        return nil;
+    }
+    return response;
 }
 @end

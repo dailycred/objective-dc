@@ -18,6 +18,8 @@ extern NSString* const kConnectEndpoint;
 extern NSString* const kAccessTokenEndpoint;
 extern NSString* const kMeJsonEndpoint;
 extern NSString* const kCurrentUserKey;
+extern NSString* const kSigninEndpoint;
+extern NSString* const kSignupEndpoint;
 
 @property (strong) NSString *clientId;
 @property (strong) NSString *clientSecret;
@@ -33,17 +35,20 @@ extern NSString* const kCurrentUserKey;
 
 -(void) authenticateWithCallbackUrl:(NSString *) callback;
 
--(void)connectUser:(DCUser *)user withIdentityProvider:(NSString *)identityProvider;
-
-+(DCClient *)sharedClient;
+-(void) connectUser:(DCUser *)user withIdentityProvider:(NSString *)identityProvider;
 
 -(NSString *)getAccessTokenFromCode:(NSString *)code;
 
 -(NSDictionary *)getUserJsonFromAccessToken:(NSString *)accessToken;
 
+-(DCUser *)signinUserWithLogin:(NSString *)login andPassword:(NSString *)password andError:(NSError **)error;
+
+-(DCUser *)signupOrSigninUserWithLogin:(NSString *)login andPassword:(NSString *) password andError:(NSError **)error;
+
 -(DCURL *)getAuthURLFromEndpoint:(NSString *)endpoint;
 -(DCURL *)getURLFromEndpoint:(NSString *)endpoint;
 
++(DCClient *)sharedClient;
 +(DCUser *)getCurrentUser;
 +(void)setCurrentUser:(DCUser *)user;
 +(void)logout;

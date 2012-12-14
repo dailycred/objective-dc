@@ -15,13 +15,17 @@
 
 -(DCUser *)initWithAccessToken:(NSString *)accessToken{
     NSDictionary *response = [[DCClient sharedClient] getUserJsonFromAccessToken:accessToken];
-    self.uuid = [response objectForKey:@"id"];
-    self.email = [response objectForKey:@"email"];
-    self.display = [response objectForKey:@"display"];
-    self.picture = [response objectForKey:@"picture"];
-    self.identities = [response objectForKey:@"identities"];
-    self.accessTokens = [response objectForKey:@"access_tokens"];
-    self.json = response;
+    return [self initWithDictionary:response];
+}
+
+-(DCUser *)initWithDictionary:(NSDictionary *)dictionary{
+    self.uuid = [dictionary objectForKey:@"id"];
+    self.email = [dictionary objectForKey:@"email"];
+    self.display = [dictionary objectForKey:@"display"];
+    self.picture = [dictionary objectForKey:@"picture"];
+    self.identities = [dictionary objectForKey:@"identities"];
+    self.accessTokens = [dictionary objectForKey:@"access_tokens"];
+    self.json = dictionary;
     return self;
 }
 
