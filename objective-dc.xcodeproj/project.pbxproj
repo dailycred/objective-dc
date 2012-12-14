@@ -23,6 +23,8 @@
 		36AC651A1678140F0033BDC6 /* DCUser.h in Headers */ = {isa = PBXBuildFile; fileRef = 36AC65121678140F0033BDC6 /* DCUser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		36AC651B1678140F0033BDC6 /* DCUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AC65131678140F0033BDC6 /* DCUser.m */; };
 		36AC652016781DDE0033BDC6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36AC651F16781DDE0033BDC6 /* UIKit.framework */; };
+		36E4446B167ACD8E00E6CAB2 /* DCAuthViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 36E44468167ACD8E00E6CAB2 /* DCAuthViewController.h */; };
+		36E4446C167ACD8E00E6CAB2 /* DCAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E44469167ACD8E00E6CAB2 /* DCAuthViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,9 @@
 		36AC65121678140F0033BDC6 /* DCUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCUser.h; sourceTree = "<group>"; };
 		36AC65131678140F0033BDC6 /* DCUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCUser.m; sourceTree = "<group>"; };
 		36AC651F16781DDE0033BDC6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		36E44468167ACD8E00E6CAB2 /* DCAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DCAuthViewController.h; path = ../DCAuthViewController.h; sourceTree = "<group>"; };
+		36E44469167ACD8E00E6CAB2 /* DCAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DCAuthViewController.m; path = ../DCAuthViewController.m; sourceTree = "<group>"; };
+		36E4446A167ACD8E00E6CAB2 /* DCAuthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DCAuthViewController.xib; path = ../DCAuthViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +119,9 @@
 		36AC645F16780C450033BDC6 /* objective-dc */ = {
 			isa = PBXGroup;
 			children = (
+				36E44468167ACD8E00E6CAB2 /* DCAuthViewController.h */,
+				36E44469167ACD8E00E6CAB2 /* DCAuthViewController.m */,
+				36E4446A167ACD8E00E6CAB2 /* DCAuthViewController.xib */,
 				36AC650C1678140F0033BDC6 /* DCClient.h */,
 				36AC650D1678140F0033BDC6 /* DCClient.m */,
 				36AC650E1678140F0033BDC6 /* DCURL.h */,
@@ -165,6 +173,7 @@
 				36AC65161678140F0033BDC6 /* DCURL.h in Headers */,
 				36AC65181678140F0033BDC6 /* DCURLParser.h in Headers */,
 				36AC651A1678140F0033BDC6 /* DCUser.h in Headers */,
+				36E4446B167ACD8E00E6CAB2 /* DCAuthViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +278,7 @@
 				36AC65171678140F0033BDC6 /* DCURL.m in Sources */,
 				36AC65191678140F0033BDC6 /* DCURLParser.m in Sources */,
 				36AC651B1678140F0033BDC6 /* DCUser.m in Sources */,
+				36E4446C167ACD8E00E6CAB2 /* DCAuthViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
