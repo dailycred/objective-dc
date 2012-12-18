@@ -62,8 +62,8 @@ static DCUser *currentUser = nil;
 
 -(void) authenticateWithCallbackUrl:(NSString *) callback{
     DCURLParser *parser = [[DCURLParser alloc] initWithURLString:callback];
-    NSString *code = [parser valueForVariable:@"code"];
-    NSString *accessToken = [self getAccessTokenFromCode:code];
+    NSString *accessToken = [parser valueForHashVariable:@"access_token"];
+    NSLog(@"access token is %@", accessToken);
     [DCClient setCurrentUser: [[DCUser alloc] initWithAccessToken:accessToken]];
 }
 
@@ -133,6 +133,7 @@ static DCUser *currentUser = nil;
     if (redirectUri != nil){
         url = [url URLbyAppendingParameterWithKey:@"redirect_uri" andValue:redirectUri];
     }
+    url = [url URLbyAppendingParameterWithKey:@"response_type" andValue:@"token"];
     return url;
 }
 

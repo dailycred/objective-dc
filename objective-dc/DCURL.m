@@ -51,7 +51,9 @@
         NSMutableDictionary *details = [NSMutableDictionary dictionary];
         NSDictionary *responseError = [[response objectForKey:@"errors"] objectAtIndex:0];
         [details setValue:[responseError objectForKey:@"message"] forKey:NSLocalizedDescriptionKey];
-        [details setValue:[responseError objectForKey:@"attribute"] forKey:@"attribute"];
+        if ([responseError objectForKey:@"attribute"] != nil){
+            [details setValue:[responseError objectForKey:@"attribute"] forKey:@"attribute"];
+        }
         [details setValue:response forKey:@"json"];
         *error = [NSError errorWithDomain:@"dailycred" code:200 userInfo:details];
         return nil;

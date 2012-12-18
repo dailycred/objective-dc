@@ -10,11 +10,14 @@
 
 @interface DCURLParser : NSObject {
     NSArray *variables;
+    NSArray *hashVariables;
 }
 
 @property (nonatomic, retain) NSArray *variables;
+@property (nonatomic, retain) NSArray *hashVariables;
 
 - (id)initWithURLString:(NSString *)url;
 - (NSString *)valueForVariable:(NSString *)varName;
+- (NSString *)valueForHashVariable:(NSString *)varName;
 
 @end
