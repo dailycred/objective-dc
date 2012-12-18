@@ -4,8 +4,6 @@
 
 You can view a demo app using this library [here](https://github.com/dailycred/ios-example).
 
-This library is very new, so there may be bugs. Please report a bug by creating an issue in this repository or email `support@dailycred.com`.
-
 To get started, first clone this repository in your app's file directory:
 
     cd your_app_directory
@@ -17,7 +15,7 @@ Now that you've added the project to your app, there are a few settings you need
 
 ## Configuring Your Target
 
-###### Many of the instructions for this section were copied from the wonderful [RestKit](https://github.com/RestKit/RestKit) library.
+###### Some of the pictures for this section were copied from the wonderful [RestKit](https://github.com/RestKit/RestKit) library's documentation. If you are confused when you see "ReskKit" in the pictures, assume it will be "objective-dc".
 
 Now that your project is aware of Objective-DC, you need to configure a few settings and add some required Frameworks to your project's build configuration. Click on the top-most item in the Project Navigator to open the Project and Targets configuration pane.
 
@@ -39,10 +37,13 @@ Once the Target Dependency has been configured, you now need to link the Objecti
 
 Select the Objective-DC static library.
 
-You are all set for using Objective-DC in your application. To make sure everything is working, open a file and insert `#import "DCClient.h"` at the top of the file. If no error is seen, everything should be working well.
+You are all set for using Objective-DC in your application. <strong>To make sure everything is working, open a file and insert `#import "DCClient.h"` at the top of the file. Build the project with <code><span>&#8984; + b</span></code>. If no error is seen, everything should be working well.</strong>
 
 If you are still experiencing difficulties, copying the header files from `objective-dc` to your main file tree may fix compilation errors. Open the `objective-dc.xcodeproj` folder and `objective-dc` subfolder in your project navigator. Select the 4 headers files (the ones that end in `.h`) and drag them into a folder called `Headers` in your main folder.
+
 ![Copy Headers](https://raw.github.com/dailycred/objective-dc/master/docs/copy_headers.png)
+
+To make sure everything is working, 
 
 ## Custom URL scheme
 
