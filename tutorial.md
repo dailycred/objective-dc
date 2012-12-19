@@ -26,7 +26,7 @@ Set your **Product Name** and **Company Identifier** to whatever you want, and s
 
 ###### Install the Dailycred Library
 
-Follow the [configuring your target](https://github.com/dailycred/objective-dc#installation) instructions for getting the objective-c library installed in Xcode.
+Follow the [installation](https://github.com/dailycred/objective-dc#installation) instructions for getting the objective-c library installed in Xcode.
 
 ###### Setup a custom URL Scheme
 
@@ -55,7 +55,7 @@ Open the file `ViewController.xib`. Drag a **Round Rect Button** into the view a
 
 ![Signup Button](https://raw.github.com/dailycred/objective-dc/master/docs/signin_button_connect.png)
 
-Now go to the file `ViewController.m` and you should see that a new method was created called `- (IBAction)signinButtonPressed:(id)sender`. First add a line to `#import "DCClient.h"`. Then simply add one line to the `signinButtonPressed` method that calls `authorize`.
+Now go to the file `ViewController.m` and you should see that a new method was created called `- (IBAction)signinButtonPressed:(id)sender`. First add a line at the top with `#import "DCClient.h"`. Then simply add one line to the `signinButtonPressed` method that calls `authorize`.
 
 	- (IBAction)signinButtonPressed:(id)sender {
     	[[DCClient sharedClient] authorize];
