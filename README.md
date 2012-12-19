@@ -4,6 +4,9 @@
 
 You can view a demo app using this library [here](https://github.com/dailycred/ios-example).
 
+##Installation
+###Download
+
 To get started, first clone this repository in your app's file directory:
 
     cd your_app_directory
@@ -11,9 +14,11 @@ To get started, first clone this repository in your app's file directory:
 
 Open XCode, right click on your main project file in the navigation window and click `Add Files to your_app_name`. Choose the `objective-dc.xcodeproj` file that you just downloaded.
 
+![Add Files](https://raw.github.com/dailycred/objective-dc/master/docs/add_files.png)
+
 Now that you've added the project to your app, there are a few settings you need to configure.
 
-## Configuring Your Target
+### Configuring Your Target
 
 ###### Some of the pictures for this section were copied from the wonderful [RestKit](https://github.com/RestKit/RestKit) library's documentation. If you are confused when you see "ReskKit" in the pictures, assume it will be "objective-dc".
 
@@ -25,7 +30,7 @@ NOTE: Try removing the -all_load flag if you are receiving runtime errors relate
 
 ![Add Linker Flag](https://github.com/RestKit/RestKit/raw/master/Docs/Images/Installation/03_Add_Linker_Flag.png)
 
-After configuring the Linker Flag, clear the text from the search box and input "_header search path_". Double click on the build setting titled **Header Search Paths**. A panel will pop open prompting you to input the Header Search Path you wish to add. Input **"$(BUILT_PRODUCTS_DIR)/../../Headers"**. Be sure to include the surrounding quotes (-- they are important!) and hit Done.
+After configuring the Linker Flag, clear the text from the search box and input **header search path**. Double click on the build setting titled **Header Search Paths**. A panel will pop open prompting you to input the Header Search Path you wish to add. Input **"$(BUILT_PRODUCTS_DIR)/../../Headers"**. Be sure to include the surrounding quotes (-- they are important!) and hit Done.
 ![Add Header Search Path](https://raw.github.com/dailycred/objective-dc/master/docs/header_search_paths.png)
 
 Now click on the **Build Phases** tab and click the disclosure triangle next to the item titled **Target Dependencies**. A sheet will pop open asking you to select the target you want to add a dependency on. Click **objective-dc** and hit the **Add** button.
@@ -43,7 +48,6 @@ If you are still experiencing difficulties, copying the header files from `objec
 
 ![Copy Headers](https://raw.github.com/dailycred/objective-dc/master/docs/copy_headers.png)
 
-To make sure everything is working, 
 
 ## Custom URL scheme
 

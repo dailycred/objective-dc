@@ -72,6 +72,19 @@
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
+         filePath = "objective-dc/DCClient.m"
+         timestampString = "377141133.382704"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "104"
+         endingLineNumber = "104"
+         landmarkName = "-signinUserWithLogin:andPassword:andError:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
          filePath = "objective-dcTests/objective_dcTests.m"
          timestampString = "377142269.094553"
          startingColumnNumber = "9223372036854775807"
