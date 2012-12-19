@@ -4,6 +4,8 @@
 
 You can view a demo app using this library [here](https://github.com/dailycred/ios-example).
 
+There is also a [tutorial](https://github.com/dailycred/objective-dc/blob/master/tutorial.md) that walks you through creating an app from scratch with Dailycred.
+
 ##Installation
 ###Download
 
