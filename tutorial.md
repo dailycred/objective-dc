@@ -8,7 +8,7 @@ This tutorial will teach you how to use Dailycred in your iOS application to all
 
 ###### Create a Dailycred Account
 
-To follow this tutorial, you will need a free account from [Dailycred](https://www.dailycred.com/). When signing up, simply add `callback` to your approved domains.
+To follow this tutorial, you will need a free account from [Dailycred](https://www.dailycred.com/). When signing up, simply add `localhost` to your approved domains.
 
 ![Sign Up](https://raw.github.com/dailycred/objective-dc/master/docs/signup_dc.png)
 
@@ -16,7 +16,7 @@ To follow this tutorial, you will need a free account from [Dailycred](https://w
 
 Open Xcode (or [download](https://itunes.apple.com/us/app/xcode/id497799835?ls=1&mt=12) if you need to) and select **File > New > New Project**. For this tutorial, we will be making a **Single View Application** (even though we will be adding more views later on).
 
-![Page Based](https://raw.github.com/dailycred/objective-dc/master/docs/single_page.png)
+![Page Based](https://raw.github.com/dailycred/objective-dc/master/docs/single_view.png)
 
 Set your **Product Name** and **Company Identifier** to whatever you want, and save the project somewhere.
 

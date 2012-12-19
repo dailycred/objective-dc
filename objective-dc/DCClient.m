@@ -39,7 +39,6 @@ static DCUser *currentUser = nil;
 
 -(void) authorize{
     DCURL *url = [self getAuthURLFromEndpoint:kGatewayEndpoint];
-    url = [url URLbyAppendingParameterWithKey:@"client_id" andValue:clientId];
     [[UIApplication sharedApplication] openURL: url];
 }
 
