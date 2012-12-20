@@ -7,7 +7,12 @@
 //
 
 #import <SenTestingKit/SenTestingKit.h>
+#import "DCUser.h"
+#import "DCClient.h"
 
-@interface objective_dcTests : SenTestCase
+@interface objective_dcTests : SenTestCase{
+    DCClient *dailycred;
+    DCClient *badClient;
+}
 
 @end

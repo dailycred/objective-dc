@@ -17,6 +17,7 @@
 @property (strong) NSDictionary *identities;
 @property (strong) NSDictionary *accessTokens;
 @property (strong) NSDictionary *json;
+@property (strong) NSString *token;
 
 -(DCUser *)initWithAccessToken:(NSString *)accessToken;
 -(DCUser *)initWithDictionary:(NSDictionary *)dictionary;

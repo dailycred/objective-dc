@@ -20,6 +20,11 @@ extern NSString* const kMeJsonEndpoint;
 extern NSString* const kCurrentUserKey;
 extern NSString* const kSigninEndpoint;
 extern NSString* const kSignupEndpoint;
+extern NSString* const kResetPasswordEndpoint;
+extern NSString* const kChangePasswordEndpoint;
+extern NSString* const kFireEventEndpoint;
+extern NSString* const kTagUserEndpoint;
+extern NSString* const kUntagUserEndpoint;
 
 @property (strong) NSString *clientId;
 @property (strong) NSString *clientSecret;
@@ -28,6 +33,8 @@ extern NSString* const kSignupEndpoint;
 @property (strong) NSArray *identityProviders;
 
 +(DCClient*) initWithClientId:(NSString*) clientId andClientSecret:(NSString*)clientSecret withRedirectUri:(NSString *)redirectUri;
+
+-(DCClient*) initWithClientId:(NSString *) clientId andClientSecret:(NSString *)clientSecret withRedirectUri:(NSString *)redirectUri;
 
 -(void) authorize;
 
@@ -48,10 +55,18 @@ extern NSString* const kSignupEndpoint;
 -(DCURL *)getAuthURLFromEndpoint:(NSString *)endpoint;
 -(DCURL *)getURLFromEndpoint:(NSString *)endpoint;
 
+
+-(void)resetPasswordForUser:(DCUser *)user andError:(NSError **)error;
+-(void)changePasswordFrom:(NSString *)oldPass to:(NSString *)newPass forUser:(DCUser *)user withError:(NSError **)error;
+-(void)fireEventWithEventType:(NSString *)eventType forUser:(DCUser *)user withValue:(NSString *)value andError:(NSError **)error;
+-(void)tagUserWithTag:(NSString *)tag forUser:(DCUser *)user andError:(NSError **)error;
+-(void)untagUserWithTag:(NSString *)tag forUser:(DCUser *)user andError:(NSError **)error;
+
 +(DCClient *)sharedClient;
 +(DCUser *)getCurrentUser;
 +(void)setCurrentUser:(DCUser *)user;
 +(void)logout;
+
 
 
 @end

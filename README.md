@@ -103,6 +103,24 @@ The client will then go through the entire OAuth flow and retrieve the user's de
     NSLog(@"identities: %@",user.identities);
     NSLog(@"json response: %@",user.json); //returns a dictionary of the json response from https://www.dailycred.com/graph/me.json
 
+    // For example, this code could display information from facebook if the user connected with facebook.
+
+    DCUser *user = [DCClient getCurrentUser];
+    NSDictionary *facebook = [user.identities objectForKey:@"facebook"];
+    if (facebook != nil){
+        NSString *facebookLink = [facebook objectForKey:@"link"];
+        NSLog("link to user's facebook: %@", facebookLink); // http://www.facebook.com/username
+    }
+
+    // Or with GitHub:
+
+    NSDictionary *github = [user.identities objectForKey:@"github"];
+    if (github != nil){
+        NSNumber *followers = [github objectForKey:@"followers"];
+        NSNumber *publicRepos = [github objectForKey:@"public_repos"];
+    }
+
+
 You can log out the current user:
 
     [DCClient logout];
@@ -117,6 +135,33 @@ You can also login or sign up a user with just an email and password:
 
     //if signin or signup is successful, the user is persisted
     DCUser *sameUser = [DCClient getCurrentUser];
+
+Connect an existing user with another identity provider to get more social information:
+
+    DCUser *user = [DCClient getCurrentUser];
+    [[DCClient sharedClient] connectUser:user withIdentityProvider:@"google"];
+
+Allow your users to reset their password via email or with a "Change password" form in your app
+
+    DCUser *user = [DCClient getCurrentUser];
+    [[DCClient sharedClient] resetPasswordForUser:user andError:nil];
+
+    [[DCClient sharedClient] changePasswordFrom:oldPassword to:newPassword forUser:user withError:&error];
+
+Fire custom events see user activity on your Dailycred dashboard
+
+    DCUser *user = [CClient getCurrentUser];
+    [DCClient sharedClient] fireEventWithEventType:@"level completed" forUser:user withValue:@"temple of doom" andError:nil];
+
+    // 'value' for event can be nil
+    [DCClient sharedClient] fireEventWithEventType:@"finished onboarding" forUser:user withValue:nil andError:nil];
+
+Tag users for performing special queries on your dailycred dashboard
+
+    DCUser *user = [CClient getCurrentUser];
+    [DCClient sharedClient] tagUserWithTag:@"expert" forUser:user andError:nil];
+
+    [DCClient sharedClient] untagUserWithTag:@"expert" forUser:user andError:nil];
 
 
 ![](https://www.dailycred.com/dc.gif?client_id=dailycred&title=objc_repo "dailycred")

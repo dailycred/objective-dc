@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "objective-dcTests/objective_dcTests.m"
-         timestampString = "377040588.07945"
+         timestampString = "377660527.818208"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "70"
-         endingLineNumber = "70"
+         startingLineNumber = "71"
+         endingLineNumber = "71"
          landmarkName = "-testURLUtils"
          landmarkType = "5">
       </FileBreakpoint>
@@ -21,33 +21,7 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "objective-dc/DCURL.m"
-         timestampString = "377141950.98549"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "47"
-         endingLineNumber = "47"
-         landmarkName = "-getJsonResponseWithHTTPMethod:andError:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "objective-dc/DCURL.m"
-         timestampString = "377140499.209674"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "42"
-         endingLineNumber = "42"
-         landmarkName = "-getJsonResponseWithHTTPMethod:andError:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "objective-dc/DCURL.m"
-         timestampString = "377141950.98549"
+         timestampString = "377724233.028167"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "49"
@@ -60,7 +34,7 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "objective-dc/DCURL.m"
-         timestampString = "377140499.209674"
+         timestampString = "377724233.028167"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "44"
@@ -72,12 +46,38 @@
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "objective-dc/DCClient.m"
-         timestampString = "377578850.552692"
+         filePath = "objective-dc/DCURL.m"
+         timestampString = "377724233.028167"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "100"
-         endingLineNumber = "100"
+         startingLineNumber = "51"
+         endingLineNumber = "51"
+         landmarkName = "-getJsonResponseWithHTTPMethod:andError:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "objective-dc/DCURL.m"
+         timestampString = "377724233.028167"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "46"
+         endingLineNumber = "46"
+         landmarkName = "-getJsonResponseWithHTTPMethod:andError:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "objective-dc/DCClient.m"
+         timestampString = "377724233.028167"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "91"
+         endingLineNumber = "91"
          landmarkName = "-signinUserWithLogin:andPassword:andError:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -92,6 +92,19 @@
          startingLineNumber = "90"
          endingLineNumber = "90"
          landmarkName = "-testSignin"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "objective-dc/DCClient.m"
+         timestampString = "377724233.028167"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "166"
+         endingLineNumber = "166"
+         landmarkName = "-fireEventWithEventType:forUser:withValue:andError:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

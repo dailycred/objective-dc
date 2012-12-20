@@ -11,7 +11,7 @@
 
 @implementation DCUser
 
-@synthesize uuid, email, display, picture, identities, accessTokens, json;
+@synthesize uuid, email, display, picture, identities, accessTokens, json, token;
 
 -(DCUser *)initWithAccessToken:(NSString *)accessToken{
     NSDictionary *response = [[DCClient sharedClient] getUserJsonFromAccessToken:accessToken];
@@ -25,6 +25,7 @@
     self.picture = [dictionary objectForKey:@"picture"];
     self.identities = [dictionary objectForKey:@"identities"];
     self.accessTokens = [dictionary objectForKey:@"access_tokens"];
+    self.token = [dictionary objectForKey:@"access_token"];
     self.json = dictionary;
     return self;
 }
@@ -52,6 +53,7 @@
     [encoder encodeObject:self.identities forKey:@"identities"];
     [encoder encodeObject:self.accessTokens forKey:@"access_tokens"];
     [encoder encodeObject:self.json forKey:@"json"];
+    [encoder encodeObject:self.token forKey:@"token"];
 }
 
 -(id)initWithCoder:(NSCoder *)decoder{
@@ -63,6 +65,7 @@
         self.identities = [decoder decodeObjectForKey:@"identities"];
         self.accessTokens = [decoder decodeObjectForKey:@"access_tokens"];
         self.json = [decoder decodeObjectForKey:@"json"];
+        self.token = [decoder decodeObjectForKey:@"token"];
     }
     return self;
 }
