@@ -1,6 +1,4 @@
-#Objective-DC
-
-#### Objective-DC is an objective-c library for using Dailycred for user authentication in your iOS apps.
+## iOS
 
 You can view a demo app using this library [here](https://github.com/dailycred/ios-example).
 
@@ -22,7 +20,7 @@ Now that you've added the project to your app, there are a few settings you need
 
 ### Configuring Your Target
 
-###### Some of the pictures for this section were copied from the wonderful [RestKit](https://github.com/RestKit/RestKit) library's documentation. If you are confused when you see "ReskKit" in the pictures, assume it will be "objective-dc".
+**Some of the pictures for this section were copied from the wonderful [RestKit](https://github.com/RestKit/RestKit) library's documentation. If you are confused when you see "ReskKit" in the pictures, assume it will be "objective-dc".**
 
 Now that your project is aware of Objective-DC, you need to configure a few settings and add some required Frameworks to your project's build configuration. Click on the top-most item in the Project Navigator to open the Project and Targets configuration pane.
 
