@@ -70,8 +70,8 @@
     STAssertEqualObjects(@"https://www.dailycred.com/graph/me.json",[url absoluteString],@"url should construct correctly");
     url = [testDailycred getAuthURLFromEndpoint:kConnectEndpoint];
     DCURLParser *parser = [[DCURLParser alloc] initWithURLString:[url absoluteString]];
-    STAssertEqualObjects([parser valueForVariable:@"client_id"], @"client_id",@"client_id should be set");
-    STAssertEqualObjects([parser valueForVariable:@"redirect_uri"], @"myapp://url",@"redirect_uri should be set");
+    STAssertEqualObjects([parser valueForVariable:@"client_id"], @"client%5Fid",@"client_id should be set");
+    STAssertEqualObjects([parser valueForVariable:@"redirect_uri"], @"myapp%3A%2F%2Furl",@"redirect_uri should be set");
 }
 
 -(void)testSignin{
@@ -97,7 +97,7 @@
     
     //test successful signup
     long time = [[NSDate date] timeIntervalSince1970];
-    NSString *email = [NSString stringWithFormat:@"testemail%llu@test.test",time];
+    NSString *email = [NSString stringWithFormat:@"testemail%lu@test.test",time];
     user = [dailycred signupOrSigninUserWithLogin:email andPassword:@"password" andError:&error];
     STAssertNil(error,@"error should be nil");
     STAssertNotNil(user,@"user should not be nil");
@@ -109,7 +109,7 @@
     NSError *error = nil;
     
     long time = [[NSDate date] timeIntervalSince1970];
-    NSString *email = [NSString stringWithFormat:@"testemail%llu@test.test",time];
+    NSString *email = [NSString stringWithFormat:@"testemail%lu@test.test",time];
     DCUser *user = [dailycred signupOrSigninUserWithLogin:email andPassword:@"password" andError:&error];
     
     //successful password reset
@@ -168,6 +168,14 @@
     error = nil;
     [badClient untagUserWithTag:@"woot" forUser:user andError:&error];
     STAssertNotNil(error,@"untagging shouldnt work with a bad client");
+}
+
+-(void)testURLEncoding{
+    DCURL *url = [dailycred getAuthURLFromEndpoint:kAccessTokenEndpoint];
+    url = [url URLbyAppendingParameterWithKey:@"awesome" andValue:@"magic+email@gmail.com"];
+    DCURLParser *parser = [[DCURLParser alloc] initWithURLString:[url absoluteString]];
+    NSString *parameter = [parser valueForVariable:@"awesome"];
+    STAssertFalse([parameter isEqualToString:@"magic+email@gmail.com"], @"parameter should be encoded");
 }
 
 

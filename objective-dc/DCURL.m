@@ -23,7 +23,8 @@
 - (DCURL *)URLbyAppendingParameterWithKey:(NSString *)key andValue:(NSString *)value{
     key = [key stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];    
     value = [value stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    return [self URLByAppendingQueryString:[NSString stringWithFormat:@"%@=%@", key, value]];
+    NSString *encodedParameter = (__bridge NSString *)CFURLCreateStringByAddingPercentEscapes(NULL,(__bridge CFStringRef)value,NULL,(CFStringRef)@"!*'();@&+$,/?%#[]~=_-.:",kCFStringEncodingUTF8 );
+    return [self URLByAppendingQueryString:[NSString stringWithFormat:@"%@=%@", key, encodedParameter]];
 }
 
 -(NSDictionary *)getJsonResponse{
